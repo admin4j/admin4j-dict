@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.admin4j</groupId>
+        <artifactId>admin4j-parent</artifactId>
+        <version>0.8.0</version>
+    </parent>
+    <groupId>com.admin4j.dict</groupId>
+    <artifactId>dict-translation</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>dict-translation</name>
+    <modules>
+        <module>dict-core</module>
+        <module>dict-anno</module>
+        <module>dict-provider-sql</module>
+        <module>dict-json</module>
+        <module>dict-excel</module>
+        <module>dict-spring-boot-example</module>
+        <module>dict-spring-boot-starter</module>
+    </modules>
+
+    <properties>
+        <revision>1.0-SNAPSHOT</revision>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+</project>

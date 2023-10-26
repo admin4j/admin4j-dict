@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin4j.dict.example.mapper.ConsumerMapper">
+
+    <resultMap id="consumerMap" type="com.admin4j.dict.example.model.Consumer">
+        <result column="consumer_id" property="consumerId" jdbcType="INTEGER"/>
+        <result column="consumer_name" property="consumerName" jdbcType="VARCHAR"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="create_by" property="createBy" jdbcType="INTEGER"/>
+        <result column="update_by" property="updateBy" jdbcType="INTEGER"/>
+    </resultMap>
+    
+    <select id="list" resultMap="consumerMap">
+        select *
+        from consumer;
+    </select>
+</mapper>

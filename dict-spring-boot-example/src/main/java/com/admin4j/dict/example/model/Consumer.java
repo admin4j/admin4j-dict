@@ -39,7 +39,6 @@ public class Consumer {
      */
     @Dict(dictStrategy = SqlDictProvider.DICT_STRATEGY, dictType = "user")
     @TableDict(labelField = "user_name", codeField = "user_id", whereSql = "del_flag = 0")
-    // @JsonProperty("updateName")
     @DictJson
     @ExcelProperty(converter = EnhanceConverter.class)
     private Integer updateBy;

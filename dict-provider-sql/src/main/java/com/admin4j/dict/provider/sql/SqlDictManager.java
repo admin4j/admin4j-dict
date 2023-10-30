@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * 基于sql的字典
+ * 基于注解的sql字典
  *
  * @author andanyang
  * @since 2022/7/24 13:35

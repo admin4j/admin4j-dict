@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.admin4j.dict.provider.autoconfigure.SqlProviderAutoconfigure
+  com.admin4j.dict.provider.sql.autoconfigure.SqlProviderAutoconfigure

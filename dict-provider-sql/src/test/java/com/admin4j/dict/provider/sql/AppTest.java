@@ -1,4 +1,4 @@
-package com.admin4j.dict.provider;
+package com.admin4j.dict.provider.sql;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

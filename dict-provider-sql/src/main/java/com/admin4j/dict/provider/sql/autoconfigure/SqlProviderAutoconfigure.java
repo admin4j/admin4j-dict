@@ -1,12 +1,14 @@
-package com.admin4j.dict.provider.autoconfigure;
+package com.admin4j.dict.provider.sql.autoconfigure;
 
-import com.admin4j.dict.provider.SqlDictProvider;
 import com.admin4j.dict.provider.sql.SqlDictManager;
+import com.admin4j.dict.provider.sql.SqlDictProvider;
+import com.admin4j.dict.provider.sql.SqlDictService;
 import com.admin4j.dict.provider.sql.impl.JdbcSqlDictManager;
 import com.admin4j.dict.provider.sql.impl.MybatisSqlDictManager;
 import com.admin4j.dict.provider.sql.impl.mapper.SqlDictMapper;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.mapper.MapperFactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -44,8 +46,8 @@ public class SqlProviderAutoconfigure {
 
     @Bean
     @ConditionalOnBean(SqlDictManager.class)
-    public SqlDictProvider sqlDictProvider(SqlDictManager sqlDictManager) {
-        return new SqlDictProvider(sqlDictManager);
+    public SqlDictProvider sqlDictProvider(SqlDictManager sqlDictManager, @Autowired(required = false) SqlDictService sqlDictService) {
+        return new SqlDictProvider(sqlDictManager, sqlDictService);
     }
 
 

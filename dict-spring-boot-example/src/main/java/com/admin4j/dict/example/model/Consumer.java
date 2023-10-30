@@ -4,7 +4,7 @@ import com.admin4j.dict.anno.Dict;
 import com.admin4j.dict.anno.TableDict;
 import com.admin4j.dict.excel.EnhanceConverter;
 import com.admin4j.dict.json.anno.DictJson;
-import com.admin4j.dict.provider.SqlDictProvider;
+import com.admin4j.dict.provider.sql.SqlDictProvider;
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;
 

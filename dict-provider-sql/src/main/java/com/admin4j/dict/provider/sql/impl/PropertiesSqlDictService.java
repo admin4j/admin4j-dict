@@ -19,9 +19,9 @@ import java.util.Map;
 public class PropertiesSqlDictService implements SqlDictService {
 
 
-    private final SqlDictProperties sqlDictProperties;
+    protected final SqlDictProperties sqlDictProperties;
 
-    private final SqlDictManager sqlDictManager;
+    protected final SqlDictManager sqlDictManager;
 
     /**
      * 通过 字典code 获取字典显示值

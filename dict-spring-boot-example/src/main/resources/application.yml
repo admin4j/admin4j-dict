@@ -8,5 +8,16 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
 
+logging:
+  level:
+    com.admin4j: debug
+
+admin4j:
+  dict:
+    sql-dict-map:
+      user:
+        codeFiled: user_id
+        labelFiled: user_name
+        whereSql: del_flag = 0

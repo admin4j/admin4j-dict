@@ -17,8 +17,8 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @JacksonAnnotationsInside
 @JsonSerialize(
-        using = DictSerializer.class,
-        keyUsing = DictSerializer.class
+        using = DictSerializer.class
+        // keyUsing = DictSerializer.class
 )
 public @interface DictJson {
 

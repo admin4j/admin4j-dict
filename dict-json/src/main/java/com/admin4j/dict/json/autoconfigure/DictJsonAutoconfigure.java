@@ -1,6 +1,6 @@
 package com.admin4j.dict.json.autoconfigure;
 
-import com.admin4j.dict.anno.DictCacheManager;
+import com.admin4j.dict.core.DictCacheManager;
 import com.admin4j.dict.json.mvc.DictWebConfig;
 import org.springframework.context.annotation.Bean;
 

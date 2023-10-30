@@ -1,7 +1,7 @@
 package com.admin4j.dict.excel.autoconfigure;
 
-import com.admin4j.dict.anno.DictCacheManager;
-import com.admin4j.dict.anno.impl.CachedDictProviderManager;
+import com.admin4j.dict.core.DictCacheManager;
+import com.admin4j.dict.core.impl.CachedDictProviderManager;
 import com.admin4j.dict.excel.DictExcelReadListener;
 import com.admin4j.dict.excel.enhance.DictEnhanceService;
 import com.admin4j.dict.excel.enhance.SensitivityEnhanceService;

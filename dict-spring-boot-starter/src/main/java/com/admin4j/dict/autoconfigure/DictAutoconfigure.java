@@ -1,6 +1,6 @@
 package com.admin4j.dict.autoconfigure;
 
-import com.admin4j.dict.anno.impl.CachedDictProviderManager;
+import com.admin4j.dict.core.impl.CachedDictProviderManager;
 import org.springframework.context.annotation.Bean;
 
 /**

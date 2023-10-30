@@ -1,8 +1,8 @@
-package com.admin4j.dict.anno.impl;
+package com.admin4j.dict.core.impl;
 
 
-import com.admin4j.dict.anno.DictProvider;
-import com.admin4j.dict.anno.DictProviderManager;
+import com.admin4j.dict.core.DictProvider;
+import com.admin4j.dict.core.DictProviderManager;
 import com.admin4j.spring.plugin.provider.manager.ProviderManager;
 
 import java.lang.reflect.Field;

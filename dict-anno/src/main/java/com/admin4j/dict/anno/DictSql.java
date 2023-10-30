@@ -10,7 +10,7 @@ import java.lang.annotation.RetentionPolicy;
  * @since 2022/7/6 17:43
  */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface TableDict {
+public @interface DictSql {
 
     /**
      * @return 展示字段

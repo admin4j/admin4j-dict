@@ -1,8 +1,8 @@
 package com.admin4j.dict.provider.sql;
 
 
-import com.admin4j.dict.anno.DictProvider;
-import com.admin4j.dict.anno.TableDict;
+import com.admin4j.dict.anno.DictSql;
+import com.admin4j.dict.core.DictProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
@@ -40,12 +40,12 @@ public class SqlDictProvider implements DictProvider {
     @Override
     public String dictLabel(Field field, String dictType, Object dictCode) {
 
-        TableDict tableDict = field.getAnnotation(TableDict.class);
-        if (tableDict == null && sqlDictService != null) {
+        DictSql dictSql = field.getAnnotation(DictSql.class);
+        if (dictSql == null && sqlDictService != null) {
             return sqlDictService.dictLabel(dictType, dictCode);
         } else {
-            Assert.notNull(tableDict, "table cannot be null");
-            return sqlDictManager.dictLabel(dictType, dictCode, tableDict.codeField(), tableDict.labelField(), tableDict.whereSql());
+            Assert.notNull(dictSql, "table cannot be null");
+            return sqlDictManager.dictLabel(dictType, dictCode, dictSql.codeField(), dictSql.labelField(), dictSql.whereSql());
         }
     }
 
@@ -55,12 +55,12 @@ public class SqlDictProvider implements DictProvider {
     @Override
     public Map<Object, String> dictLabels(Field field, String dictType, Collection<Object> dictCodes) {
 
-        TableDict tableDict = field.getAnnotation(TableDict.class);
-        if (tableDict == null && sqlDictService != null) {
+        DictSql dictSql = field.getAnnotation(DictSql.class);
+        if (dictSql == null && sqlDictService != null) {
             return sqlDictService.dictLabels(dictType, dictCodes);
         }
-        Assert.notNull(tableDict, "table cannot be null");
-        return sqlDictManager.dictLabels(dictType, dictCodes, tableDict.codeField(), tableDict.labelField(), tableDict.whereSql());
+        Assert.notNull(dictSql, "table cannot be null");
+        return sqlDictManager.dictLabels(dictType, dictCodes, dictSql.codeField(), dictSql.labelField(), dictSql.whereSql());
     }
 
     /**
@@ -75,12 +75,12 @@ public class SqlDictProvider implements DictProvider {
     public Object dictCode(Field field, String dictType, String dictLabel) {
 
 
-        TableDict tableDict = field.getAnnotation(TableDict.class);
-        if (tableDict == null && sqlDictService != null) {
+        DictSql dictSql = field.getAnnotation(DictSql.class);
+        if (dictSql == null && sqlDictService != null) {
             return sqlDictService.dictCode(dictType, dictLabel);
         }
-        Assert.notNull(tableDict, "table cannot be null");
-        return sqlDictManager.dictCode(dictType, dictLabel, tableDict.codeField(), tableDict.labelField(), tableDict.whereSql());
+        Assert.notNull(dictSql, "table cannot be null");
+        return sqlDictManager.dictCode(dictType, dictLabel, dictSql.codeField(), dictSql.labelField(), dictSql.whereSql());
     }
 
     /**

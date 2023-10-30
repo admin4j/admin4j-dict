@@ -1,7 +1,7 @@
 package com.admin4j.dict.json.mvc;
 
 
-import com.admin4j.dict.anno.DictCacheManager;
+import com.admin4j.dict.core.DictCacheManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

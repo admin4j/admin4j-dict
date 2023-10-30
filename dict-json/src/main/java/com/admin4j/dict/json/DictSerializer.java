@@ -1,7 +1,7 @@
 package com.admin4j.dict.json;
 
 import com.admin4j.dict.anno.Dict;
-import com.admin4j.dict.anno.DictProviderManager;
+import com.admin4j.dict.core.DictProviderManager;
 import com.admin4j.dict.json.anno.DictJson;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.BeanProperty;
@@ -24,11 +24,10 @@ import java.util.Objects;
  */
 @RequiredArgsConstructor
 public class DictSerializer extends JsonSerializer<Object> implements ContextualSerializer {
+    private final DictProviderManager dictProviderManager;
     private Dict dict;
     private DictJson dictJson;
     private BeanProperty property;
-    private final DictProviderManager dictProviderManager;
-
     private Field field; // 当前字段在对象中的Field
 
 

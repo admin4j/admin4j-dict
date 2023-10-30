@@ -2,8 +2,8 @@ package com.admin4j.dict.excel.enhance;
 
 import com.admin4j.dict.anno.Dict;
 import com.admin4j.dict.anno.DictList;
-import com.admin4j.dict.anno.DictProviderManager;
-import com.admin4j.dict.anno.ObjectCast;
+import com.admin4j.dict.core.DictProviderManager;
+import com.admin4j.dict.core.ObjectCast;
 import com.admin4j.dict.excel.ExcelEnhanceService;
 import com.admin4j.spring.util.SpringUtils;
 import com.alibaba.excel.metadata.GlobalConfiguration;

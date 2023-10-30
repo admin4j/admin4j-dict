@@ -1,4 +1,4 @@
-package com.admin4j.dict.anno;
+package com.admin4j.dict.core;
 
 import java.lang.reflect.Field;
 import java.util.Collection;

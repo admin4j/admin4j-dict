@@ -1,6 +1,6 @@
 package com.admin4j.dict.excel;
 
-import com.admin4j.dict.anno.impl.CachedDictProviderManager;
+import com.admin4j.dict.core.impl.CachedDictProviderManager;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.read.listener.ReadListener;
 import lombok.AllArgsConstructor;

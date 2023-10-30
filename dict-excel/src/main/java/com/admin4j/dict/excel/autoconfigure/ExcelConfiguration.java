@@ -1,7 +1,7 @@
 package com.admin4j.dict.excel.autoconfigure;
 
 
-import com.admin4j.dict.anno.DictCacheManager;
+import com.admin4j.dict.core.DictCacheManager;
 import com.admin4j.framework.excel.ExcelWriteLifecycle;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

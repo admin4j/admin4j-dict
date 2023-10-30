@@ -1,4 +1,4 @@
-package com.admin4j.dict.anno;
+package com.admin4j.dict.core;
 
 import java.util.List;
 import java.util.Objects;

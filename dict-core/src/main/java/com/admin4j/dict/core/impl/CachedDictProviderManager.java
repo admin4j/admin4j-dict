@@ -1,8 +1,8 @@
-package com.admin4j.dict.anno.impl;
+package com.admin4j.dict.core.impl;
 
 import com.admin4j.dict.anno.Dict;
-import com.admin4j.dict.anno.DictCacheManager;
 import com.admin4j.dict.anno.DictList;
+import com.admin4j.dict.core.DictCacheManager;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 

@@ -1,7 +1,7 @@
 package com.admin4j.dict.json.mvc;
 
 
-import com.admin4j.dict.anno.DictCacheManager;
+import com.admin4j.dict.core.DictCacheManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,12 +23,14 @@ public class DictInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 这里可以添加需要在接口处理前执行的逻辑
-        return true; // 返回true继续执行后续拦截器，返回false终止执行
+        // 返回true继续执行后续拦截器，返回false终止执行
+        return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         // 这里可以添加需要在接口处理后，但在视图渲染前的逻辑
+        // System.out.println("handler = " + handler);
     }
 
     @Override

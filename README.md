@@ -60,7 +60,7 @@
 <dependency>
     <groupId>com.admin4j.dict</groupId>
     <artifactId>dict-spring-boot-starter</artifactId>
-    <version>0.8.2</version>
+    <version>0.8.1</version>
 </dependency>
 ```
 

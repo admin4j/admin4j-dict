@@ -98,7 +98,7 @@ public class Consumer {
 }
 ```
 
-具体示例 查看 `dict-spring-boot-example`
+具体示例 查看 [`dict-spring-boot-example`](./admin4j-dict/tree/master/dict-spring-boot-example)
 
 ## 配置方式一： 纯注解
 

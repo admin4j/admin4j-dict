@@ -98,7 +98,7 @@ public class Consumer {
 }
 ```
 
-具体示例 查看 `dict-spring-boot-example`
+具体示例 查看 [`dict-spring-boot-example`](https://github.com/admin4j/admin4j-dict/tree/master/dict-spring-boot-example)
 
 ## 配置方式一： 纯注解
 
@@ -171,7 +171,7 @@ c.a.d.p.s.i.m.SqlDictMapper.dictLabel    : ==> Parameters: 100(Integer)
 c.a.d.p.s.i.m.SqlDictMapper.dictLabel    : <==      Total: 1
 ```
 
-### 参考 DictResponseBodyAdvice 开始缓存
+### 参考 [DictResponseBodyAdvice](https://github.com/admin4j/admin4j-dict/blob/master/dict-spring-boot-example/src/main/java/com/admin4j/dict/example/DictResponseBodyAdvice.java) 开始缓存
 
 开始缓存之后，会变得使用批量查询，提供查询效率
 

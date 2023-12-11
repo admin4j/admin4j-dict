@@ -22,4 +22,11 @@ public @interface Dict {
      * @return 字典类型
      */
     String dictType();
+
+    /**
+     * 忽略控制
+     *
+     * @return
+     */
+    boolean ignoreEmpty() default true;
 }

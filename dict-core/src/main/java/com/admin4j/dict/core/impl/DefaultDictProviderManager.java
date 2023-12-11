@@ -7,6 +7,7 @@ import com.admin4j.spring.plugin.provider.manager.ProviderManager;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
 
@@ -36,6 +37,9 @@ public class DefaultDictProviderManager implements DictProviderManager {
      */
     @Override
     public Map<Object, String> dictLabels(Field field, String strategy, String dictType, Collection<Object> dictCodes) {
+        if (dictCodes == null || dictCodes.isEmpty()) {
+            return Collections.emptyMap();
+        }
         return Objects.requireNonNull(ProviderManager.load(DictProvider.class, strategy)).dictLabels(field, dictType, dictCodes);
     }
 

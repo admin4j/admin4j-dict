@@ -27,7 +27,7 @@
     </modules>
 
     <properties>
-        <revision>0.9.0</revision>
+        <revision>0.9.4</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

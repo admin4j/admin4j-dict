@@ -65,7 +65,14 @@ public class CachedDictProviderManager extends DefaultDictProviderManager implem
      */
     @Override
     public String dictLabel(Field field, String strategy, String dictType, Object dictCode) {
+
+
         Map<Field, Map<Object, String>> fieldMapMap = THREAD_LOCAL_CACHE.get();
+
+        Dict annotation = field.getAnnotation(Dict.class);
+        if (annotation != null && isIgnore(annotation, dictCode)) {
+            return "";
+        }
         if (fieldMapMap == null) {
             fieldMapMap = new HashMap<>(32);
             THREAD_LOCAL_CACHE.set(fieldMapMap);
@@ -150,9 +157,15 @@ public class CachedDictProviderManager extends DefaultDictProviderManager implem
 
             Object code = field.get(row);
             if (code instanceof Collection) {
-                codes.addAll((Collection<?>) code);
+                for (Object obj : ((Collection) code)) {
+                    if (!isIgnore(dict, code)) {
+                        codes.add(code);
+                    }
+                }
             } else {
-                codes.add(code);
+                if (!isIgnore(dict, code)) {
+                    codes.add(code);
+                }
             }
             if (codes.size() >= BATCH_NUM) {
                 Map<Object, String> dictFieldCache = super.dictLabels(field, dict.dictStrategy(), dict.dictType(), codes);
@@ -172,6 +185,28 @@ public class CachedDictProviderManager extends DefaultDictProviderManager implem
         }
         dictCache.put(field, dictFieldCacheAll);
         THREAD_LOCAL_CACHE.set(dictCache);
+    }
+
+    /**
+     * 是否忽略当前 code
+     *
+     * @param dict
+     * @param code
+     * @return
+     */
+    protected boolean isIgnore(Dict dict, Object code) {
+        if (dict.ignoreEmpty()) {
+            if (code == null) {
+                return true;
+            }
+            if (code instanceof Number) {
+                return code.equals(0) || code.equals(0L);
+            }
+            if (code instanceof String) {
+                return "".equals(code);
+            }
+        }
+        return false;
     }
 
     public String dictLabel(Field field, Object code) {

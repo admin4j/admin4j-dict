@@ -32,7 +32,7 @@ public class SensitivityEnhanceService implements ExcelEnhanceService {
      */
     @Override
     public String convertToJavaData(ReadCellData<?> cellData, ExcelContentProperty contentProperty, GlobalConfiguration globalConfiguration) {
-        return null;
+        return cellData.getStringValue();
     }
 
     @Override

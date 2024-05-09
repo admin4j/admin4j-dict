@@ -60,7 +60,7 @@ public class MybatisSqlDictManager implements SqlDictManager {
             if (o instanceof String) {
                 result.put(map.get("code"), (String) o);
             } else {
-                result.put(map.get("code"), o.toString());
+                result.put(map.get("code"), o == null ? null : o.toString());
             }
         }
         return result;
